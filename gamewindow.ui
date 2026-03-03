@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gamewindow</class>
+ <widget class="QWidget" name="gamewindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>gamewindow</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="pageMenu">
+      <widget class="QLabel" name="labelMenu">
+       <property name="geometry">
+        <rect>
+         <x>309</x>
+         <y>76</y>
+         <width>251</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>贪  吃  蛇</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStart">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>260</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>开始游戏</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonRank">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>320</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>计分排行</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonIntro">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>380</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>游戏介绍</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageGame">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="GameView" name="gameView" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageRank">
+      <widget class="QLabel" name="labelRank">
+       <property name="geometry">
+        <rect>
+         <x>259</x>
+         <y>70</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>计  分  排  行</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelScore1">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>190</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelScore2">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>270</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelScore3">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>340</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelScore4">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>420</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelScore5">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>490</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonBAck">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>487</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>返回主菜单</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>198</x>
+         <y>180</y>
+         <width>171</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="labelRank1">
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>第 一 名 ：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRank2">
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>第 二 名 ：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRank3">
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>第 三 名 ：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRank4">
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>第 四 名 ：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRank5">
+          <property name="font">
+           <font>
+            <pointsize>24</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>第 五 名 ：</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageIntro">
+      <widget class="QLabel" name="labelIntro">
+       <property name="geometry">
+        <rect>
+         <x>299</x>
+         <y>62</y>
+         <width>291</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>游 戏 介 绍</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonBack">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>450</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>返回主菜单</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>130</y>
+         <width>551</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>  使用上下左右键或者AWDS可以控制蛇的移动，蛇初始为三节。
+
+      吃掉红苹果蛇加一节并获得10分，每吃掉一个红苹果会生成
+一个新的红苹果；随机生成金苹果，只会存在6秒，场上最多1个,
+吃掉金苹果蛇加三节并加50分；随机生成毒苹果，只会存在7秒,
+场上最多5个，吃掉毒苹果蛇减四节并扣30分。
+
+ 蛇头触碰地图边缘，触碰蛇身，或是蛇的长度少于两节则蛇死亡,
+游戏结束。</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageOver">
+      <widget class="QLabel" name="labelover">
+       <property name="geometry">
+        <rect>
+         <x>289</x>
+         <y>60</y>
+         <width>371</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>游  戏  结  束</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelover2">
+       <property name="geometry">
+        <rect>
+         <x>189</x>
+         <y>190</y>
+         <width>271</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>最  终  得  分 ：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelFinalScore">
+       <property name="geometry">
+        <rect>
+         <x>479</x>
+         <y>209</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonagain">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>329</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>再来一局</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonback">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>420</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>返回主菜单</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GameView</class>
+   <extends>QWidget</extends>
+   <header>gameview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
